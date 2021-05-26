@@ -1,0 +1,20 @@
+// ./modules/blockquote
+
+// -------------------------------------------------------------------
+// BLOCKQUOTE VARIBALES
+// -------------------------------------------------------------------
+//BLOCKQUOTE
+$font-style-blockquote: oblique;
+$padding-blockquote: .1rem 0 .1rem 2rem;
+$border-left-blockquote: 4px solid $colorNeutral3;
+
+// -------------------------------------------------------------------
+// BLOCKQUOTE CODE
+// -------------------------------------------------------------------
+
+// BLOCKQUOTE
+blockquote, .blockquote{
+    font-style: $font-style-blockquote;
+    padding: $padding-blockquote;
+    border-left: $border-left-blockquote;
+  }

@@ -1,0 +1,64 @@
+// -------------------------------------------------------------------
+// ./modules/grids
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+// VARIABLES
+// -------------------------------------------------------------------
+
+$row-gap: 0;
+$column-gap: 0;
+
+// -------------------------------------------------------------------
+// CODE
+// -------------------------------------------------------------------
+@use "sass:map";
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: $row-gap $column-gap;
+  > * {
+    grid-column: span 12;
+    grid-row: span 1;
+  }
+
+  @for $i from 1 to 6 {
+    &.gap-#{$i} {
+      gap: $i +rem;
+    }
+  }
+}
+
+@each $size, $values in $screen-sizes {
+  @media screen and (min-width: map-get($values, "breakpoint")) {
+    @for $i from 1 through 12 {
+      .col-#{$size}-#{$i} {
+        grid-column: span + " " + #{$i};
+        @for $j from 0 to 12 {
+          &.col-off-#{$j} {
+            grid-column: ($j + 1) / span + " " + $i;
+          }
+        }
+      }
+
+      .row-#{$size}-#{$i} {
+        grid-row: span + " " + #{$i};
+        @for $j from 0 to 12 {
+          &.row-off-#{$j} {
+            grid-row: ($j + 1) / span + " " + $i;
+          }
+        }
+      }
+
+      @for $j from 0 to 12 {
+        .col-off-#{$j} {
+          grid-column: ($j + 1) / span + " " + $i;
+        }
+        .row-off-#{$j} {
+          grid-row: ($j + 1) / span + " " + $i;
+        }
+      }
+    }
+  }
+}

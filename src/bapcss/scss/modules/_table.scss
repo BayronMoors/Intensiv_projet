@@ -1,0 +1,95 @@
+// ./modules/table
+
+// -------------------------------------------------------------------
+// TABLE VARIBALES
+// -------------------------------------------------------------------
+    $margin-table: 1rem 0 3rem 0;
+    $font-size-table: 1rem;
+    $text-align-table: left;
+
+    $text-transform-table-thead: uppercase;
+    $font-family-table-thead: $font-2;
+    $font-weight-table-thead: 900; 
+    
+    $padding-table-child: 1.5rem 0;
+    $padding-left-table-child: .5rem;
+
+    $border-table: 3px solid $colorNeutral3;
+
+// -------------------------------------------------------------------
+// TABLE CODE
+// -------------------------------------------------------------------
+    table{
+        margin: $margin-table;
+        font-size: $font-size-table;
+        text-align: $text-align-table;
+        thead{
+         text-transform: $text-transform-table-thead;
+         font-family: $font-family-table-thead;
+         font-weight: $font-weight-table-thead;   
+         > *{
+            padding: $padding-table-child;
+            &:not(:last-child){
+                padding-left: $padding-left-table-child;
+            }
+            &:last-child{
+                
+                @media screen and (min-width: map-get($screen-sizes, "s", "breakpoint")) {
+                    padding-left: $padding-left-table-child;
+                }
+            }
+        }
+        }
+        tbody{
+            text-align: left;
+            tr:nth-of-type(2n+1){
+                background: $colorLight;
+            }
+            tr{
+                border-top: $border-table;
+                &:last-of-type{
+                border-bottom: $border-table;
+                }
+                > *{
+                    padding: $padding-table-child;
+                    &:not(:last-child){
+                        padding-left: $padding-left-table-child;
+                    }
+                    &:last-child{
+                        
+                        @media screen and (min-width: map-get($screen-sizes, "s", "breakpoint")) {
+                            padding-left: $padding-left-table-child;
+                        }
+                    }
+                }
+            }
+        }
+        tfoot{
+            tr{
+                > *{
+                    padding: $padding-table-child;
+                    &:not(:last-child){
+                        padding-left: $padding-left-table-child;
+                    }
+                    &:last-child{
+                        
+                        @media screen and (min-width: map-get($screen-sizes, "s", "breakpoint")) {
+                            padding-left: $padding-left-table-child;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.alternate{
+            tbody{
+
+                    border-left: $border-table;
+                    border-right: $border-table;
+                    tr td:not(:last-of-type){
+                        border-left: $border-table;
+                        border-right: $border-table;
+                    }
+            }
+        }
+    }

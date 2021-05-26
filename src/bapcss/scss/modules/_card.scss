@@ -1,0 +1,32 @@
+// ./modules/card
+
+// -------------------------------------------------------------------
+// CARD VARIBALES
+// -------------------------------------------------------------------
+
+
+// -------------------------------------------------------------------
+// CARD CODE
+// -------------------------------------------------------------------
+
+.card{
+    display: block;
+    text-align: center;
+    padding: 3rem;
+    border-bottom: 3px solid $colorNeutral3;
+    &:nth-of-type(2n){
+        border-right: 3px solid $colorNeutral3;
+    }
+    .card-title{
+        font-size: $font-size-h2;
+        @media screen and (min-width: map-get($screen-sizes, "m", "breakpoint")) {
+        font-size: $font-size-h1;
+        }
+    }
+    .card-subtitle{
+        font-size: $font-size-subtitle-s;
+        @media screen and (min-width: map-get($screen-sizes, "m", "breakpoint")) {
+        font-size: $font-size-subtitle-l;
+        }
+    }
+}

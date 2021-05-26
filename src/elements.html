@@ -1,59 +1,536 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elements-Project Intensiv, project for static Web site. Web developper & Web designer</title>
     <link rel="stylesheet" href="./scss/app.scss">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    <header>
-        <h1>Intensiv'</h1>
-        <nav>
-            <div>
-                <ul>
-                    <li><a href="#">This is Intensiv'</a></li>
-                    <li><a href="#">Generic Page</a></li>
-                    <li><a href="#">Elements reference</a></li>
-                </ul>
+
+<body class="container pos-relative">
+    <header class="main-header text-center">
+        <h2 class="main-logo ">Intensiv'</h2>
+        <nav class="nav">
+            <div class="hide-until-l">
+                <div class="dFlex j-space-between a-center">
+                    <ul class="list-nav">
+                        <li><a href="./index.html" class="nav-link">This is Intensiv'</a></li>
+                        <li><a href="./post.html" class="nav-link">Generic Page</a></li>
+                        <li><a href="./elements.html" class="nav-link">Elements reference</a></li>
+                    </ul>
+                    <ul class="list-icon">
+                        <li><a href="#" class="icon"><i class="fab fa-twitter "></i></a></li>
+                        <li><a href="#" class="icon"><i class="fab fa-facebook-f "></i></a></li>
+                        <li><a href="#" class="icon"><i class="fab fa-instagram "></i></a></li>
+                        <li><a href="#" class="icon"><i class="fab fa-github "></i></a></li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <ul>
-                    <li><a href="#"><i>t</i></a></li>
-                    <li><a href="#"><i>f</i></a></li>
-                    <li><a href="#"><i>i</i></a></li>
-                    <li><a href="#"><i>g</i></a></li>
-                </ul>
+            <div class="hide-from-l test">
+                <div class="menu-horizontal">
+                    <i class="fas fa-bars"> MENU</i>
+                </div>
             </div>
         </nav>
     </header>
     <main>
-        <h2>Elements reference</h2>
-        <section>
-            <h3>Colors</h3>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <hr>
-        </section>
-        <section>
-            <h3>Text - "merriweater", Gerorgian Serif | #212931</h3>
-            <p>This is <b>bold</b> and this is <strong>strong</strong>. this is <i>italic</i> and this is <em>emphasized</em>. This is <sup>superscript</sup> text and this is <sub>subscript</sub> text. This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, this is a <a href="#">link</a>.</p>
-            <hr>
-        </section>
-        <section>
-            <h3>Headers - "source sans pro", Helvetica, sans-serif | #212931</h3>
-            <div>Heading level 1</div>
-            <div>Heading level 2</div>
-            <div>Heading level 3</div>
-            <div>Heading level 4</div>
-            <div>Heading level 5</div>
-            <div>Heading level 6</div>
-            <hr>
-        </section>
+        <div class="main-content boxed">
+            <div class="text-center">
+                <h1 class="main-title">Elements <span class="dBlock margin-b">reference</span></h1>
+            </div>
+            <section>
+                <h2>Colors</h2>
+                <div class="dFlex wrap">
+                    <div class="color-block color-hover dFlex j-center a-center">#18BFEF</div>
+                    <div class="color-block color-light dFlex j-center a-center">#F6F6F6</div>
+                    <div class="color-block color-text dFlex j-center a-center">#717981</div>
+                    <div class="color-block color-4 dFlex j-center a-center">#4E403D</div>
+                    <div class="color-block color-title dFlex j-center a-center">#212931</div>
+                </div>
+                <div class="hr"></div>
+            </section>
+            <section>
+                <h2>Text <span class="h6">- "merriweater", Gerorgia, Serif | #212931</span></h2>
+                <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is
+                    <em>emphasized</em>. This is <sup>superscript</sup> text and this is <sub>subscript</sub> text. This
+                    is
+                    <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, this is a <a
+                        href="#">link</a>.
+                </p>
+                <div class="hr"></div>
+            </section>
+            <section>
+                <h2>Headers <span class="h6">- "source sans pro", Helvetica, sans-serif | #212931</span></h2>
+                <div class="h1">Heading level 1</div>
+                <div class="h2">Heading level 2</div>
+                <div class="h3">Heading level 3</div>
+                <div class="h4">Heading level 4</div>
+                <div class="h5">Heading level 5</div>
+                <div class="h6">Heading level 6</div>
+                <div class="hr"></div>
+            </section>
+            <section>
+                <h2 class="title-l">Heading with a subtitle</h2>
+                <p class="subtitle-l">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat mollitia in nobis beatae. Esse
+                    perspiciatis rem explicabo eum officia tempora, dolorum in autem hic recusandae saepe eius commodi
+                    error accusamus.</p>
+
+                <h2 class="title-m">Heading with a subtitle</h2>
+                <p class="subtitle-m">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat mollitia in nobis beatae. Esse
+                    perspiciatis rem explicabo eum officia tempora, dolorum in autem hic recusandae saepe eius commodi
+                    error accusamus.</p>
+
+                <h2 class="title-s">Heading with a subtitle</h2>
+                <p class="subtitle-s">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat mollitia in nobis beatae. Esse
+                    perspiciatis rem explicabo eum officia tempora, dolorum in autem hic recusandae saepe eius commodi
+                    error accusamus.</p>
+                <div class="hr"></div>
+            </section>
+            <section class="grid">
+                <h2>Lists</h2>
+                <div class="col-m-6">
+                    <h3>Unordered - ul</h3>
+                    <ul class="list">
+                        <li>Dolor pulvinar etiam.</li>
+                        <li>Sagittis lorem eleifend.</li>
+                        <li>Felis feugiat dolore viverra.</li>
+                        <li>Dolor pulvinar etiam.</li>
+                    </ul>
+                    <h3>Alternate - ul.alternate</h3>
+                    <ul class="list-alternate">
+                        <li>Dolor pulvinar etiam etiam.</li>
+                        <li>Sagittis adipiscing eleifend.</li>
+                        <li>Felis enim dolore viverra.</li>
+                        <li>Dolor pulvinar etiam etiam.</li>
+                    </ul>
+                </div>
+                <div class="col-m-6">
+                    <h3>Ordered</h3>
+                    <ol class="list-ordonee">
+                        <li>Dolor pulvinar ertiam.</li>
+                        <li>Sagittis lorem eleifend.</li>
+                        <li>Felis feugiat dolore viverra.</li>
+                        <li>Dolor pulvinar etiam.</li>
+                        <li>Felis enim et tempus.</li>
+                    </ol>
+                    <h3>icons</h3>
+                    <div class="dFlex flexColumn">
+                        <ul class="list-icon">
+                            <li><a href="#" class="icon"><i class="fab fa-twitter "></i></a></li>
+                            <li><a href="#" class="icon"><i class="fab fa-facebook-f "></i></a></li>
+                            <li><a href="#" class="icon"><i class="fab fa-instagram "></i></a></li>
+                            <li><a href="#" class="icon"><i class="fab fa-github "></i></a></li>
+                            <li><a href="#" class="icon"><i class="fab fa-dribbble"></i></a></li>
+                        </ul>
+                        <ul class="list-icon">
+                            <li><a href="#" class="icon border"><i class="fab fa-twitter "></i></a></li>
+                            <li><a href="#" class="icon border"><i class="fab fa-facebook-f "></i></a></li>
+                            <li><a href="#" class="icon border"><i class="fab fa-instagram "></i></a></li>
+                            <li><a href="#" class="icon border"><i class="fab fa-github "></i></a></li>
+                            <li><a href="#" class="icon border"><i class="fab fa-dribbble"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <h3>Definition</h3>
+                <ul class="list-definition">
+                    <li>
+                        <h4>Item 1</h4>
+                        <p class="text-definition">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+                            distinctio facilis dicta aperiam officia. Earum optio quibusdam doloremque amet minima, eum
+                            mollitia, aliquam similique, deleniti numquam dignissimos soluta officiis qui?</p>
+                    </li>
+                    <li>
+                        <h4>Item 2</h4>
+                        <p class="text-definition">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+                            distinctio facilis dicta aperiam officia. Earum optio quibusdam doloremque amet minima, eum
+                            mollitia, aliquam similique, deleniti numquam dignissimos soluta officiis qui?</p>
+                    </li>
+                    <li>
+                        <h4>Item 3</h4>
+                        <p class="text-definition">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+                            distinctio facilis dicta aperiam officia. Earum optio quibusdam doloremque amet minima, eum
+                            mollitia, aliquam similique, deleniti numquam dignissimos soluta officiis qui?</p>
+                    </li>
+                </ul>
+                <h3>Actions</h3>
+                <div>
+                    <ul class="list-actions">
+                        <li class="item-inlineBlock"><a href="#" class="btn">Primary</a></li>
+                        <li class="item-inlineBlock"><a href="#" class="btn-light">Default</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="list-actions">
+                        <li class="item-inlineBlock"><a href="#" class="btn small">Small</a></li>
+                        <li class="item-inlineBlock"><a href="#" class="btn-light small">Small</a></li>
+                    </ul>
+                </div>
+                <div class="col-m-6">
+                    <ul class="list-actions">
+                        <li class="item-block"><a href="#" class="btn">Default</a></li>
+                        <li class="item-block"><a href="#" class="btn-light">Default</a></li>
+                    </ul>
+                </div>
+                <div class="col-m-6">
+                    <ul class="list-actions">
+                        <li class="item-block"><a href="#" class="btn small">Small</a></li>
+                        <li class="item-block"><a href="#" class="btn-light small">Small</a></li>
+                    </ul>
+                </div>
+                <div class="col-m-6">
+                    <ul class="list-actions">
+                        <li class="item-inline"><a href="#" class="btn fit">Default</a></li>
+                        <li class="item-inline"><a href="#" class="btn-light fit">Default</a></li>
+                    </ul>
+                </div>
+                <div class="col-m-6">
+                    <ul class="list-actions">
+                        <li class="item-inline"><a href="#" class="btn small fit">Small</a></li>
+                        <li class="item-inline"><a href="#" class="btn-light small fit">Small</a></li>
+                    </ul>
+                </div>
+                <div class="hr"></div>
+            </section>
+            <section>
+                <h2>Blockquote</h2>
+                <blockquote>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid eligendi voluptatum magni
+                        architecto
+                        deserunt ullam totam quibusdam vel repellendus veritatis nam id veniam quaerat, soluta, tenetur
+                        dolore iusto modi illo. deserunt ullam totam quibusdam vel repellendus, tenetur dolore iusto
+                        modi
+                        illo.</p>
+                </blockquote>
+
+                <div class="hr"></div>
+            </section>
+            <section>
+                <h2>Table</h2>
+                <h4>Default</h4>
+                <table class="grid">
+                    <thead>
+
+                        <tr class="grid">
+                            <th scope="col" class="col-xs-2">Name</th>
+                            <th scope="col" class="col-xs-8">Description</th>
+                            <th scope="col" class="col-xs-2">Price</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr class="grid">
+                            <th scope="row" class="col-xs-2">Item 1</th>
+                            <td class="col-xs-8 test">Lorem ipsum dolor sit amet consectetur.</td>
+                            <td class="col-xs-2">29.99</td>
+                        </tr>
+                        <tr class="grid">
+                            <th scope="row" class="col-xs-2">Item 2</th>
+                            <td class="col-xs-8">Lorem ipsum dolor sit amet.</td>
+                            <td class="col-xs-2">19.99</td>
+                        </tr>
+                        <tr class="grid">
+                            <th scope="row" class="col-xs-2">Item 3</th>
+                            <td class="col-xs-8">Lorem, ipsum dolor sit amet consectetur adipisicing.</td>
+                            <td class="col-xs-2">29.99</td>
+                        </tr>
+                        <tr class="grid">
+                            <th scope="row" class="col-xs-2">Item 4</th>
+                            <td class="col-xs-8">Lorem ipsum dolor sit amet consectetur.</td>
+                            <td class="col-xs-2">19.99</td>
+                        </tr>
+                        <tr class="grid">
+                            <th scope="row" class="col-xs-2">Item 5</th>
+                            <td class="col-xs-8">Lorem ipsum dolor sit amet.</td>
+                            <td class="col-xs-2">29.99</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="grid">
+                            <td class="col-xs-2 col-off-10">100</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <h4>Alternate</h4>
+                <table class="alternate grid">
+                    <thead>
+
+                        <tr class="grid">
+                            <th scope="col" class="col-xs-2">Name</th>
+                            <th scope="col" class="col-xs-8">Description</th>
+                            <th scope="col" class="col-xs-2">Price</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr class="grid">
+                            <th scope="row" class="col-xs-2">Item 1</th>
+                            <td class="col-xs-8 test">Lorem ipsum dolor sit amet consectetur.</td>
+                            <td class="col-xs-2">29.99</td>
+                        </tr>
+                        <tr class="grid">
+                            <th scope="row" class="col-xs-2">Item 2</th>
+                            <td class="col-xs-8">Lorem ipsum dolor sit amet.</td>
+                            <td class="col-xs-2">19.99</td>
+                        </tr>
+                        <tr class="grid">
+                            <th scope="row" class="col-xs-2">Item 3</th>
+                            <td class="col-xs-8">Lorem, ipsum dolor sit amet consectetur adipisicing.</td>
+                            <td class="col-xs-2">29.99</td>
+                        </tr>
+                        <tr class="grid">
+                            <th scope="row" class="col-xs-2">Item 4</th>
+                            <td class="col-xs-8">Lorem ipsum dolor sit amet consectetur.</td>
+                            <td class="col-xs-2">19.99</td>
+                        </tr>
+                        <tr class="grid">
+                            <th scope="row" class="col-xs-2">Item 5</th>
+                            <td class="col-xs-8">Lorem ipsum dolor sit amet.</td>
+                            <td class="col-xs-2">29.99</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="grid">
+                            <td class="col-xs-2 col-off-10">100</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div class="hr"></div>
+            </section>
+            <section class="grid">
+                <h2>Buttons</h2>
+                <div>
+                    <a href="#" class="btn">Primary</a>
+                    <a href="#" class="btn-light">Default</a>
+                </div>
+                <div>
+                    <a href="#" class="btn large">Large</a>
+                    <a href="#" class="btn-light">Default</a>
+                    <a href="#" class="btn-light small">Small</a>
+                </div>
+                <div class="col-xs-6">
+                    <a href="#" class="btn fit">Fit</a>
+                </div>
+                <div class="col-xs-6">
+                    <a href="#" class="btn-light fit">Fit</a>
+                </div>
+                <div class="col-xs-6">
+                    <a href="#" class="btn small fit">Fit + small</a>
+                </div>
+                <div class="col-xs-6">
+                    <a href="#" class="btn-light small fit">Fit + small</a>
+                </div>
+                <div>
+                    <a href="#" class="btn"><i class="fas fa-search"></i> Icon</a>
+                    <a href="#" class="btn-light"><i class="fas fa-download"></i> Icon</a>
+                </div>
+                <div>
+                    <a href="#" class="btn disabled">Primary</a>
+                    <a href="#" class="btn-light disabled">Default</a>
+                </div>
+                <div class="hr"></div>
+            </section>
+            <section>
+                <h2>Form</h2>
+                <form action="./submit.html" method="POST" class="grid gap-1">
+                    <div class="col-xs-6">
+                        <label for="ename" class="dNone">Name</label>
+                        <input type="text" name="name" id="ename" placeholder="Name" class="validate">
+                    </div>
+                    <div class="col-xs-6">
+                        <label for="eemail" class="dNone">Email</label>
+                        <input type="email" name="email" id="eemail" placeholder="Email" class="validate">
+                    </div>
+                    <label for="category"></label>
+                    <select name="category" id="category" class="selected">
+                        <option value="">Category</option>
+                        <option value="cat1">Category1</option>
+                        <option value="cat2">Category2</option>
+                        <option value="cat3">Category3</option>
+                        <option value="cat4">Category4</option>
+                    </select>
+                    <div class="grid">
+                        <div class="dFlex a-end col-s-4">
+                            <input type="radio" name="quality" id="low" class="radio">
+                            <label for="low">Low</label>
+                        </div>
+                        <div class="dFlex a-end col-s-4">
+                            <input type="radio" name="quality" id="normal" class="radio">
+                            <label for="normal">Normal</label>
+                        </div>
+                        <div class="dFlex a-end col-s-4">
+                            <input type="radio" name="quality" id="high" class="radio">
+                            <label for="high">High</label>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="dFlex a-end col-s-6">
+                            <input type="checkbox" name="copy" id="copy" class="checkbox">
+                            <label for="copy">Email me a copy</label>
+                        </div>
+                        <div class="dFlex a-end col-s-6">
+                            <input type="checkbox" name="human" id="human" class="checkbox">
+                            <label for="human">I am a human</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="emessage" class="dNone">message</label>
+                        <textarea name="message" id="emessage" cols="80" rows="10" class="validate"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn">Send Message</button>
+                        <button class="btn-light">Reset</button>
+                    </div>
+                </form>
+                <div class="hr"></div>
+            </section>
+            <section>
+                <h2>Image</h2>
+                <h4>Fit</h4>
+                <div class="grid gap-1">
+                    <img src="./images/photo-1517331237869-8c4ed7fadcb4.jpg" alt="image1" class=" fullSize">
+                    <div class="grid gap-1">
+                        <div class="col-xs-4 ">
+                            <img src="./images/photo-1517331237869-8c4ed7fadcb4.jpg" alt="image1" class="fullSize">
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="./images/photo-1621414130936-6f0c63360ec2.jpg" alt="image1" class="col-xs-4 fullSize">
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="./images/photo-1621427393280-702e840ed102.jpg" alt="image1" class="col-xs-4 fullSize">
+                        </div>
+                        <div class="col-xs-4 ">
+                            <img src="./images/photo-1517331237869-8c4ed7fadcb4.jpg" alt="image1" class="fullSize">
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="./images/photo-1621414130936-6f0c63360ec2.jpg" alt="image1" class="col-xs-4 fullSize">
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="./images/photo-1621427393280-702e840ed102.jpg" alt="image1" class="col-xs-4 fullSize">
+                        </div>
+                        <div class="col-xs-4 ">
+                            <img src="./images/photo-1517331237869-8c4ed7fadcb4.jpg" alt="image1" class="fullSize">
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="./images/photo-1621414130936-6f0c63360ec2.jpg" alt="image1" class="col-xs-4 fullSize">
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="./images/photo-1621427393280-702e840ed102.jpg" alt="image1" class="col-xs-4 fullSize">
+                        </div>
+                    </div>
+                </div>
+                <h4>Left & Right</h4>
+                <img src="./images/photo-1517331237869-8c4ed7fadcb4.jpg" alt="image1" class="float-left">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, quas hic aperiam quis quam maxime
+                    odio,
+                    quos culpa, fuga sed animi laudantium doloribus est nam ab perferendis. Eligendi, fugit ipsa.Lorem
+                    ipsum, dolor sit amet consectetur adipisicing elit. Minima, quas hic aperiam quis quam maxime odio,
+                    quos
+                    culpa, fuga sed animi laudantium doloribus est nam ab perferendis. Eligendi, fugit ipsa.Lorem ipsum,
+                    dolor sit amet consectetur adipisicing elit. Minima, quas hic aperiam quis quam maxime odio, quos
+                    culpa,
+                    fuga sed animi laudantium doloribus est nam ab perferendis. Eligendi, fugit ipsa.</p>
+
+                <img src="./images/photo-1517331237869-8c4ed7fadcb4.jpg" alt="image1" class="float-right">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, quas hic aperiam quis quam maxime
+                    odio,
+                    quos culpa, fuga sed animi laudantium doloribus est nam ab perferendis. Eligendi, fugit ipsa.Lorem
+                    ipsum, dolor sit amet consectetur adipisicing elit. Minima, quas hic aperiam quis quam maxime odio,
+                    quos
+                    culpa, fuga sed animi laudantium doloribus est nam ab perferendis. Eligendi, fugit ipsa.Lorem ipsum,
+                    dolor sit amet consectetur adipisicing elit. Minima, quas hic aperiam quis quam maxime odio, quos
+                    culpa,
+                    fuga sed animi laudantium doloribus est nam ab perferendis. Eligendi, fugit ipsa.</p>
+                <div class="hr"></div>
+            </section>
+            <section>
+                <h2>Box</h2>
+                <div class="box">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sequi voluptatem perferendis
+                        saepe
+                        possimus, in reiciendis sapiente soluta quia est exercitationem rem ex eum tempore repudiandae
+                        ea,
+                        numquam doloremque a impedit reprehenderit? Ad tempora sed beatae magni voluptatibus accusantium
+                        id
+                        dolores quos fuga facere hic nam numquam asperiores totam maiores ipsum, quaerat fugit!
+                        Accusamus
+                        deserunt voluptatum veniam velit tenetur quod. Et, a? Et aspernatur cum itaque vero. Error
+                        perspiciatis assumenda quo rerum asperiores debitis autem animi eius accusamus, tempore
+                        voluptatum
+                        fugiat laborum tenetur minus, aperiam a accusantium rem! Et maiores dolor sunt magnam! Eum hic
+                        temporibus expedita quod debitis officia.</p>
+                </div>
+                <div class="hr"></div>
+            </section>
+            <section>
+                <h2>Preformated</h2>
+                <pre>
+     i = 0;
+    
+     while (!deck.isInOrder()) {
+         print 'Iteration ' +i;
+         deck.shuffle();
+         i++;
+     }
+    
+     print 'It took ' + i + ' iteration to short the deck.';
+                    </pre>
+            </section>
+
+        </div>
+        <footer class="grid content-footer">
+            <form action="./submit.html" method="POST" class="col-l-6 row-l-4">
+                <label for="name" class="h4">Name</label>
+                <input type="text" name="name" id="name" class="validate">
+                <label for="email" class="h4">Email</label>
+                <input type="text" name="email" id="email" class="validate">
+                <label for="message" class="h4">Message</label>
+                <textarea name="message" id="message" cols="30" rows="10" class="validate"></textarea>
+                <button type="submit" class="btn-light">Send message</button>
+            </form>
+            <address class="col-l-6">
+                <ul class="dFlex">
+                    <li class="h4">Address</li>
+                    <li>9 rue Charles Deliège 4247 <span class="dBlock">Fléron, TN 00000-0000</span></li>
+                </ul>
+            </address>
+            <div class="col-l-6">
+                <ul class="dFlex">
+                    <li class="h4">Phone</li>
+                    <li>(000) 000-0000</li>
+                </ul>
+            </div>
+            <div class="col-l-6">
+                <ul class="dFlex">
+                    <li class="h4">Email</li>
+                    <li>info@untitles.tld</li>
+                </ul>
+            </div>
+            <div class="col-l-6">
+                <ul class="dFlex a-center">
+                    <li class="h4">Social</li>
+                    <li>
+                        <ul class="list-icon wrap">
+                            <li><a href="#" class="icon border"><i class="fab fa-twitter "></i></a></li>
+                            <li><a href="#" class="icon border"><i class="fab fa-facebook-f "></i></a></li>
+                            <li><a href="#" class="icon border"><i class="fab fa-instagram "></i></a></li>
+                            <li><a href="#" class="icon border"><i class="fab fa-github "></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </footer>
     </main>
+    <footer class="main-footer">
+        &copy; Untitled | Design <a href="#">IEPS</a>
+    </footer>
 </body>
+
 </html>

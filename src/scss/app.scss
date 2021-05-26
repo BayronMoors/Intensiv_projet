@@ -1,4 +1,152 @@
 // -------------------------------------------------------------------
 // import moorslizecss
 // -------------------------------------------------------------------
-@import './moorslizecss/index.scss'
+@import "../bapcss/scss/index.scss";
+
+// -------------------------------------------------------------------
+// Helpers
+// -------------------------------------------------------------------
+
+body {
+  background: radial-gradient(
+    circle,
+    rgba(78, 64, 61, 1) 0%,
+    rgba(33, 41, 49, 1) 69%
+  );
+}
+
+// -------------------------------------------------------------------
+// MAIN HEADER -------------------------------------------------------
+// -------------------------------------------------------------------
+.main-header {
+  nav {
+    padding-left: 0;
+  }
+
+  .menu-horizontal {
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    color: $colorLight;
+    z-index: 1;
+  }
+  a {
+    color: $colorLight;
+  }
+
+  .main-logo {
+    display: block;
+    color: $colorLight;
+    margin: 5em auto 2.5em auto;
+    padding: 0.3em;
+    border: 5px solid $colorLight;
+    width: 220px;
+  }
+
+      .box-title{
+      color: $colorLight;
+      padding: 5rem 1rem;
+      @media screen and (min-width : map-get($screen-sizes, "s", "breakcpoint")){
+        padding: 5rem;
+      }
+    }
+}
+
+// -------------------------------------------------------------------
+// MAIN CONTENT-------------------------------------------------------
+// -------------------------------------------------------------------
+
+.main-content {
+  background: #fff;
+  padding: 7rem 0;
+  @media screen and (min-width: map-get($screen-sizes , "l", "breakpoint" )) {
+    padding: 7em 0;
+  }
+
+  &.boxed{
+    background: #fff;
+    padding: 7rem 1rem;
+    @media screen and (min-width: map-get($screen-sizes , "l", "breakpoint" )) {
+      padding: 7em;
+    }
+
+  }
+
+  .main-title {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    @media screen and (min-width: map-get($screen-sizes, "s", "breakpoint")) {
+      font-size: 3rem;
+    }
+    @media screen and (min-width: map-get($screen-sizes, "m", "breakpoint")) {
+      font-size: $font-size-h1;
+    }
+
+
+  }
+
+  img {
+    display: block;
+    position: relative;
+    margin: 1rem 0;
+    width: 200px;
+    &.fullSize {
+      display: flex;
+      width: 100%;
+      margin: 0;
+      padding-bottom: 1rem;
+    }
+    &.float-left{
+      margin-right: 1rem;
+    }
+    &.float-right{
+      margin-left: 1rem;
+    }
+  }
+}
+
+.content-footer {
+  ul {
+    list-style: none;
+  }
+
+  background: $colorLight;
+  input,
+  textarea {
+    margin-bottom: 1.5rem;
+    background: none;
+  }
+
+  form {
+    border-right: 3px solid $colorNeutral3;
+    padding: 3rem;
+  }
+  address {
+    padding: 3rem 1rem;
+    border-bottom: 3px solid $colorNeutral3;
+    li:not(:last-of-type) {
+      margin-right: 2rem;
+    }
+  }
+  div {
+    padding: 3rem 1rem;
+    &:not(:last-of-type) {
+      border-bottom: 3px solid $colorNeutral3;
+    }
+    > ul > li {
+      margin-right: 2rem;
+    }
+  }
+}
+// -------------------------------------------------------------------
+// MAIN FOOTER--------------------------------------------------------
+// -------------------------------------------------------------------
+.main-footer {
+  text-align: center;
+  text-transform: uppercase;
+  color: $colorNeutral4;
+  margin: 3rem 0 6rem 0;
+  a {
+    color: $colorNeutral4;
+  }
+}

@@ -1,0 +1,42 @@
+// ./modules/hnav
+
+// -------------------------------------------------------------------
+// NAV VARIBALES
+// -------------------------------------------------------------------
+$background-nav: $colorNeutral4;
+$padding-left-nav: .5em;
+
+$display-nav-link: block;
+$font-size-nav-link: .8rem;
+$font-weight-nav-link: 900;
+$padding-nav-link: 2.5em 1.8em;
+$text-transform-nav-link:uppercase;
+$text-decoration-nav-link:none;
+
+$background-nav-link-hover: $colorLight;
+$color-nav-link-hover: $colorText;
+
+
+
+// -------------------------------------------------------------------
+// NAV CODE
+// -------------------------------------------------------------------
+nav,.nav{
+    background: $background-nav;
+    padding-left: $padding-left-nav;
+
+    .nav-link{
+        display: $display-nav-link;
+        font-size: $font-size-nav-link;
+        font-weight: $font-weight-nav-link;
+        padding: $padding-nav-link;
+        text-transform: $text-transform-nav-link;
+        text-decoration: $text-decoration-nav-link;
+        &:hover{
+            background: $background-nav-link-hover;
+            color: $color-nav-link-hover;
+        }
+    }
+
+}
+

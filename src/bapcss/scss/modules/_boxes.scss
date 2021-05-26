@@ -1,0 +1,194 @@
+// -------------------------------------------------------------------
+// ./modules/boxes
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+//  CONTAINER
+// -------------------------------------------------------------------
+
+@each $size, $values in $screen-sizes {
+  @media screen and (min-width: map-get($values, "breakpoint")) {
+    .container {
+      width: 100%;
+      max-width: map-get($values, "container-size");
+      margin: auto;
+    }
+  }
+}
+
+// -------------------------------------------------------------------
+// HIDE
+// -------------------------------------------------------------------
+@each $size, $values in $screen-sizes {
+  @media screen and (min-width: map-get($values, "breakpoint")) {
+    .hide-from-#{$size}{
+      display: none;
+    }
+  }
+}
+
+// SHOW
+@each $size, $values in $screen-sizes {
+  @media screen and (max-width: map-get($values, "breakpoint")) {
+    .hide-until-#{$size}{
+      display: none;
+    }
+  }
+}
+
+
+// -------------------------------------------------------------------
+// DISPLAY
+// -------------------------------------------------------------------
+
+.dBlock {
+  display: block;
+}
+
+.dInBlock {
+  display: inline-block;
+}
+
+.dFlex {
+  display: flex;
+}
+
+.dNone{
+  display: none;
+}
+
+
+// -------------------------------------------------------------------
+// DISPLAY
+// -------------------------------------------------------------------
+.pos-relative{
+  position: relative;
+}
+
+.pos-absolute{
+  position: absolute;
+}
+
+.pos-fixed{
+  position: fixed;
+}
+
+.pos-sticky{
+  position: sticky;
+}
+// -------------------------------------------------------------------
+//  CONTENT ALIGNEMENTS
+// -------------------------------------------------------------------
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+// -------------------------------------------------------------------
+// ALIGNEMENTS
+// -------------------------------------------------------------------
+
+.dFlex {
+  // WRAP
+  &.wrap {
+    flex-wrap: wrap;
+  }
+  &.wrapRev {
+    flex-wrap: wrap-reverse;
+  }
+
+  // JUSITFY
+  &.j-center {
+    justify-content: center;
+  }
+  &.a-center {
+    align-items: center;
+  }
+
+  &.j-start {
+    justify-content: flex-start;
+  }
+
+  &.j-space-between{
+    justify-content: space-between;
+  }
+
+  &.j-space-around{
+    justify-content: space-around;
+  }
+
+  &.j-space-evenly{
+    justify-content: space-evenly;
+  }
+
+  // align
+  &.a-start {
+    align-items: flex-start;
+  }
+
+  &.j-end {
+    justify-content: flex-end;
+  }
+  &.a-end {
+    align-items: flex-end;
+  }
+
+  &.a-space-between{
+    align-items: space-between;
+  }
+
+  &.a-space-around{
+    align-items: space-around;
+  }
+
+  &.a-space-evenly{
+    align-items: space-evenly;
+  }
+
+
+  // FLEX DIRECTION
+
+  &.flexRow {
+    flex-direction: row;
+  }
+
+  &.flexRowRev {
+    flex-direction: row-reverse;
+  }
+
+  &.flexColumn {
+    flex-direction: column;
+  }
+
+  &.flexColumnRev {
+    flex-direction: column-reverse;
+  }
+}
+
+
+// FLOAT
+
+.float-left{
+  float: left;
+}
+
+.float-right{
+  float: right;
+}
+
+.box{
+  font-weight: 200;
+  border: 3px solid $colorNeutral3;
+  padding: 1rem;
+}

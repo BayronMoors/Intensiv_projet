@@ -1,0 +1,170 @@
+// ./modules/list
+
+// -------------------------------------------------------------------
+// LIST VARIBALES
+// -------------------------------------------------------------------
+$margin-list: 1em 0;
+
+$padding-list: 20px;
+$margin-list--li: 0.5em 0;
+
+// ALTERNATE
+$padding-list-alternate: 20px;
+$margin-list-alternate--li: 0.5em 0;
+
+// ORDONEE
+$padding-list-ordonee: 20px;
+$margin-list-ordonee--li: 0.5em 0;
+
+// ICON
+$padding-list-icon: 0;
+$margin-list-list-icon--li: 0 0.5em;
+$list-style-list-icon: none;
+$display-list-icon: flex;
+$flex-direction-list-icon: row;
+
+// NAV
+$padding-list-nav: 0;
+$margin-list-list-nav--li: 0 0.5em;
+$list-style-list-nav: none;
+$display-list-nav: flex;
+$flex-direction-list-nav: row;
+$list-style-list-nav: none;
+$padding-list-nav: 0;
+
+$margin-left-list-nav-text-definition: 2em;
+
+// list actions
+$padding-list-actions: 0;
+$list-style-list-actions: none;
+
+$display-list-actions-item-inlineBlock: inline-block;
+$margin-bottom-list-actions-item-inlineBlock: .5rem;
+$margin-right-list-actions-item-inlineBlock: .5rem;
+
+
+$display-list-actions-item-inline:inline;
+$margin-bottom-list-actions-item-inline:.0;
+$margin-right-list-actions-item-inline:0;
+$text-align-list-actions-item-inline: center;
+$margin-top-list-actions-item-inline:0;
+
+$display-list-actions-item-block:block;
+$width-list-actions-item-block: min-content;
+$margin-bottom-list-actions-item-block:.5rem;
+$margin-right-list-actions-item-block:.5rem;
+
+// -------------------------------------------------------------------
+// LIST VARIBALES
+// -------------------------------------------------------------------
+
+.list {
+  padding-left: $padding-list;
+  margin: $margin-list;
+  li {
+    margin: $margin-list--li;
+  }
+}
+
+.list-alternate {
+  padding-left: $padding-list-alternate;
+  margin: $margin-list;
+  li {
+    margin: $margin-list-alternate--li;
+  }
+}
+
+.list-ordonee {
+  padding-left: $padding-list-ordonee;
+  margin: $margin-list;
+  li {
+    margin: $margin-list-ordonee--li;
+  }
+}
+
+.list-icon {
+  display: $display-list-icon;
+  flex-direction: $flex-direction-list-icon;
+  padding-left: $padding-list-icon;
+  margin: $margin-list;
+  list-style: $list-style-list-icon;
+  li {
+    margin: $margin-list-list-icon--li;
+  }
+}
+
+.list-nav {
+  display: $display-list-nav;
+  flex-direction: $flex-direction-list-nav;
+  padding-left: $padding-list-nav;
+  list-style: $list-style-list-nav;
+}
+
+.list-definition {
+  list-style: $list-style-list-nav;
+  padding: $padding-list-nav;
+  margin: $margin-list;
+  .text-definition {
+    margin-left: $margin-left-list-nav-text-definition;
+  }
+}
+
+
+
+.list-actions {
+  padding: $padding-list-actions;
+  list-style: $list-style-list-actions;
+  .item-inlineBlock {
+    display: $display-list-actions-item-inlineBlock;
+    margin-bottom: $margin-bottom-list-actions-item-inlineBlock;
+    margin-right: $margin-right-list-actions-item-inlineBlock;
+  }
+
+  .item-block {
+    display: $display-list-actions-item-block;
+    width:$width-list-actions-item-block;
+    margin-bottom: $margin-bottom-list-actions-item-block;
+    margin-right: $margin-right-list-actions-item-block;
+  }
+
+
+  .item-inline {
+    display: $display-list-actions-item-inline;
+    margin-top: $margin-top-list-actions-item-inline;
+    margin-bottom: $margin-bottom-list-actions-item-inline;
+    margin-right: $margin-right-list-actions-item-inline;
+    text-align: $text-align-list-actions-item-inline;
+  }
+}
+
+.list-page{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-top: 6rem;
+  li{
+    padding: 0;
+    margin: 0;
+    &:first-of-type a{
+      border-left: 3px solid $colorNeutral3;
+    }
+    a{
+      display: block;
+      padding: .4rem .8rem;
+      @media screen and (min-width: map-get($screen-sizes, 'm' , 'breakpoint')){
+        padding: .6rem 1rem;
+      }
+      margin: 0;
+      text-decoration: none;
+      &:hover{
+        background: $colorNeutral3;
+      }
+
+
+      border-right: 3px solid $colorNeutral3;
+      border-top: 3px solid $colorNeutral3;
+      border-bottom: 3px solid $colorNeutral3;
+    }
+  }
+
+}

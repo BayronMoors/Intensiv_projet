@@ -1,0 +1,57 @@
+// ./modules/subtitle
+
+// -------------------------------------------------------------------
+// SUBTITLE VARIBALES
+// -------------------------------------------------------------------
+
+    $font-size-title-l: $font-size-h2;
+    $font-size-title-m: $font-size-h3;
+    $font-size-title-s: $font-size-h5;
+
+    $font-size-subtitle-l: 1rem;
+    $font-style-subtitle-l: italic;
+    $margin-subtitle-l: 0 0 3em 0;
+
+    $font-size-subtitle-m: .85rem;
+    $font-style-subtitle-m: italic;
+    $margin-subtitle-m: 0 0 3em 0;
+    
+    $font-size-subtitle-s: .7rem;
+    $font-style-subtitle-s: italic;
+    $margin-subtitle-s: 0 0 3em 0;
+
+// -------------------------------------------------------------------
+// SUBTITLE VARIBALES
+// -------------------------------------------------------------------
+
+
+  .title-l {
+      font-size: $font-size-title-l;
+  }
+
+  .title-m {
+      font-size: $font-size-title-m;
+  }
+
+  .title-s {
+      font-size: $font-size-title-s;
+  }
+
+  .subtitle-l {
+    font-size: $font-size-subtitle-l;
+    font-style: $font-style-subtitle-l;
+    margin: $margin-subtitle-l;
+  }
+
+  .subtitle-m {
+    font-size: $font-size-subtitle-m;
+    font-style: $font-style-subtitle-m;
+    margin: $margin-subtitle-m;
+  }
+
+  .subtitle-s {
+    font-size: $font-size-subtitle-s;
+    font-style: $font-style-subtitle-s;
+    margin: $margin-subtitle-s;
+  }
+

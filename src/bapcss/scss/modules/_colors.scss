@@ -1,0 +1,72 @@
+// -------------------------------------------------------------------
+// ./modules/colors
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+//  COLOR VARIABLES
+// -------------------------------------------------------------------
+$colorNeutral2: #4e403d;
+$colorNeutral1: #717981;
+$colorNeutral3: #EEEEEE;
+$colorNeutral4: #71798159;
+$colorHover: #18bfef;
+$colorLight: #f6f6f6;
+$colorText: #212931;
+
+$color-block-color:#FFF;
+$color-block-dim:95px;
+$color-block-margin: 3px;
+
+// -------------------------------------------------------------------
+//  COLOR BLOCKS
+// -------------------------------------------------------------------
+.color-block {
+    width: $color-block-dim;
+    height: $color-block-dim;
+    color: $color-block-color;
+
+    &:not(:last-of-type){
+        margin-right: $color-block-margin;
+    }
+    
+    &.color-hover{
+        background: $colorHover;
+    }
+
+    &.color-light{
+        background: $colorLight;
+    }
+    &.color-text{
+        background: $colorNeutral1;
+    }
+    &.color-4{
+        background: $colorNeutral2;
+    }
+    &.color-title{
+        background: $colorText;
+    }
+}
+
+.text-color-light{
+    color: $colorLight;
+}
+
+.text-color-hover{
+    color: $colorHover;
+}
+
+.text-color-text{
+    color: $colorText;
+}
+
+.text-color-neutral-1{
+    color: $colorNeutral1;
+}
+
+.text-color-neutral-2{
+    color: $colorNeutral2;
+}
+
+.text-color-neutral-3{
+    color: $colorNeutral3;
+}
