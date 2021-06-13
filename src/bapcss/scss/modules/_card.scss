@@ -3,24 +3,51 @@
 // -------------------------------------------------------------------
 // CARD VARIBALES
 // -------------------------------------------------------------------
+// CARD
+$display-card: block;
+$text-align-card: center;
+$padding-card: 3rem;
+$border-bottom-card: 3px solid $colorNeutral3;
+$border-right-card-2n: 3px solid $colorNeutral3;
+// A
+$text-decoration-card-link: none;
+$color-card-link-hover: $colorHover;
 
+// CARD TITLE
+$font-size-card-title-l: $font-size-h1;
+$font-size-card-title-s: $font-size-h2;
+
+// AUTHOR
+$display-card-author: block;
+$margin-bottom-card-author: 2rem;
 
 // -------------------------------------------------------------------
 // CARD CODE
 // -------------------------------------------------------------------
 
 .card{
-    display: block;
-    text-align: center;
-    padding: 3rem;
-    border-bottom: 3px solid $colorNeutral3;
+    display: $display-card;
+    text-align: $text-align-card;
+    padding: $padding-card;
+    border-bottom: $border-bottom-card;
     &:nth-of-type(2n){
-        border-right: 3px solid $colorNeutral3;
+        border-right: $border-right-card-2n;
     }
+    .card-link{
+        text-decoration: $text-decoration-card-link;
+        > *{
+            
+        &:hover{
+            color: $color-card-link-hover;
+        }
+        }
+    }
+
+    
     .card-title{
-        font-size: $font-size-h2;
+        font-size: $font-size-card-title-s;
         @media screen and (min-width: map-get($screen-sizes, "m", "breakpoint")) {
-        font-size: $font-size-h1;
+        font-size: $font-size-card-title-l;
         }
     }
     .card-subtitle{
@@ -28,5 +55,9 @@
         @media screen and (min-width: map-get($screen-sizes, "m", "breakpoint")) {
         font-size: $font-size-subtitle-l;
         }
+    }
+    .cardAuthor{
+        display: $display-card-author;
+        margin-bottom: $margin-bottom-card-author;
     }
 }

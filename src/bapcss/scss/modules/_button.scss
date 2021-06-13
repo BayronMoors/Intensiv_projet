@@ -31,28 +31,18 @@ $padding-btn-small: 0.5rem 1.3rem;
 $padding-btn-large: 1.2rem 2.5rem;
 
 
-// BTN-LIGHT
-$display-btn-light: inline-block;
-$font-size-btn-light: 0.9rem;
-$font-weight-btn-light: 900;
-$font-family-btn-light: $font-2;
-$letter-spacing-btn-light: 0.08rem;
-$text-decoration-btn-light: none;
-$padding-btn-light: 0.9rem 2rem;
-$text-transform-btn-light: uppercase;
-$border-btn-light: 3px solid $colorText;
-$color-btn-light: $colorText;
-$background-btn-light: none;
-$margin-right-btn-light: 1.5rem;
-$margin-bottom-btn-light: 1.5rem;
+// btn-secondary
 
-$color-btn-light-hover: $colorHover;
-$border-btn-light-hover: 3px solid $colorHover;
+$color-btn-secondary: $colorText;
+$background-btn-secondary: none;
 
-// BTN-LIGHT-SMALL
+$color-btn-secondary-hover: $colorHover;
+$border-btn-secondary-hover: 3px solid $colorHover;
+
+// btn-secondary-SMALL
 $padding-btn-small-light: 0.5rem 1.3rem;
 
-// BTN-LIGHT-LARGE
+// btn-secondary-LARGE
 $padding-btn-large-light: 1.2rem 2.5rem;
 
 // BTN-FIT
@@ -61,11 +51,11 @@ $text-align-btn-fit: center;
 
 // BTN ICON
 $margin-right-btn--icon: .3rem;
-$margin-right-btn-light--icon: .3rem;
+$margin-right-btn-secondary--icon: .3rem;
 
 // BTN DISABLED
 $opacity-btn--disabled: 0.5;
-$opacity-btn-light--disabled: 0.5;
+$pointer-events-btn--disabled: none;
 
 // -------------------------------------------------------------------
 // BUTTON CODE
@@ -79,11 +69,29 @@ $opacity-btn-light--disabled: 0.5;
   text-decoration: $text-decoration-btn;
   padding: $padding-btn;
   text-transform: $text-transform-btn;
-  background: $background-btn;
-  color: $color-btn;
   border: $border-btn;
   margin-right: $margin-right-btn;
   margin-bottom: $margin-bottom-btn;
+
+  &.primary{
+    color: $color-btn;
+    background: $background-btn;
+    &:hover {
+      color: $color-btn-hover;
+      background: $background-btn-hover;
+      border: $border-btn-hover;
+    }
+  }
+  
+  &.secondary {
+    color: $color-btn-secondary;
+    background: $background-btn-secondary;
+  
+    &:hover {
+      color: $color-btn-secondary-hover;
+      border:$border-btn-secondary-hover;
+    }
+  }
 
   i{
     margin-right: $margin-right-btn--icon;
@@ -91,14 +99,10 @@ $opacity-btn-light--disabled: 0.5;
 
   &.disabled{
     opacity: $opacity-btn--disabled;
-    
+    pointer-events: $pointer-events-btn--disabled;
   }
 
-  &:hover {
-    color: $color-btn-hover;
-    background: $background-btn-hover;
-    border: $border-btn-hover;
-  }
+
 
   &.small {
     padding: $padding-btn-small;
@@ -113,47 +117,7 @@ $opacity-btn-light--disabled: 0.5;
     text-align: $text-align-btn-fit;
   }
 
-  &-light {
-    display: $display-btn-light;
-    font-size: $font-size-btn-light;
-    font-weight: $font-weight-btn-light;
-    font-family: $font-family-btn-light;
-    letter-spacing: $letter-spacing-btn-light;
-    text-decoration: $text-decoration-btn-light;
-    text-transform: $text-transform-btn-light;
-    padding: $padding-btn-light;
-    border: $border-btn-light;
-    background: $background-btn-light;
-    color: $color-btn-light;
-    margin-right: $margin-right-btn-light;
-    margin-bottom: $margin-bottom-btn-light;
 
-    i{
-      margin-right: $margin-right-btn-light--icon;
-    }
 
-    &:hover {
-      color: $color-btn-light-hover;
-      border:$border-btn-light-hover;
-    }
-
-    &.small {
-        padding: $padding-btn-small-light;
-    }
-
-    &.large{
-      padding: $padding-btn-large-light;
-    }
-
-    &.fit{
-        display: $display-btn-fit;
-        text-align: $text-align-btn-fit;
-    }
-
-    &.disabled{
-      opacity: $opacity-btn-light--disabled;
-      
-    }
-
-  }
+  
 }

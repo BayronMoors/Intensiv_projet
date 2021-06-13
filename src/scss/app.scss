@@ -9,16 +9,57 @@
 
 body {
   background: radial-gradient(
-    circle,
+    circle at top,
     rgba(78, 64, 61, 1) 0%,
-    rgba(33, 41, 49, 1) 69%
+    rgba(33, 41, 49, 1) 300px
   );
+  @media screen and (min-width: map-get($screen-sizes, "m", "breakpoint")) {
+    background: radial-gradient(
+      circle at top,
+      rgba(78, 64, 61, 1) 0%,
+      rgba(33, 41, 49, 1) 500px
+    );
+  }
+}
+
+// -------------------------------------------------------------------
+// lineStyle -------------------------------------------------------
+// -------------------------------------------------------------------
+
+.lineStyle{
+  display: block;
+  position: relative;
+  &::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border-bottom: 2px solid $colorNeutral3;
+    width: calc(50% - 7rem) ;
+    @media screen and (min-width: map-get($screen-sizes, "m", "breakpoint")) {
+      width: calc(50% - 12rem) ;
+    }
+  }
+  &::after{
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    border-bottom: 2px solid $colorNeutral3;
+    width: calc(50% - 7rem);
+    @media screen and (min-width: map-get($screen-sizes, "m", "breakpoint")) {
+      width: calc(50% - 12rem) ;
+    }
+  }
 }
 
 // -------------------------------------------------------------------
 // MAIN HEADER -------------------------------------------------------
 // -------------------------------------------------------------------
 .main-header {
+  position: relative;
   nav {
     padding-left: 0;
   }
@@ -26,7 +67,10 @@ body {
   .menu-horizontal {
     position: fixed;
     top: 1rem;
-    right: 2rem;
+    right: 5%;
+    @media screen and (min-width: map-get($screen-sizes, "s", "breakpoint")){
+    right: 7.5%; 
+    }
     color: $colorLight;
     z-index: 1;
   }
@@ -41,12 +85,16 @@ body {
     padding: 0.3em;
     border: 5px solid $colorLight;
     width: 220px;
+    &:hover{
+      border: 5px solid $colorHover;
+      color: $colorHover;
+    }
   }
 
       .box-title{
       color: $colorLight;
       padding: 5rem 1rem;
-      @media screen and (min-width : map-get($screen-sizes, "s", "breakcpoint")){
+      @media screen and (min-width : map-get($screen-sizes, "s", "breakpoint")){
         padding: 5rem;
       }
     }
@@ -84,23 +132,32 @@ body {
 
 
   }
+  figure, .imgContainer{
+    margin-bottom:1rem;
+    overflow: hidden;
+  }
 
   img {
     display: block;
     position: relative;
     margin: 1rem 0;
     width: 200px;
+    height: inherit;
+    object-fit: cover;
+    transition: all 600ms ease-in-out;
     &.fullSize {
       display: flex;
       width: 100%;
       margin: 0;
-      padding-bottom: 1rem;
     }
     &.float-left{
       margin-right: 1rem;
     }
     &.float-right{
       margin-left: 1rem;
+    }
+    &:not(.noAnime):hover{
+      transform: scale(1.2);
     }
   }
 }
@@ -148,5 +205,86 @@ body {
   margin: 3rem 0 6rem 0;
   a {
     color: $colorNeutral4;
+  }
+}
+
+
+
+
+// menu
+#trigger{
+  cursor: pointer;
+  &:hover{
+    color: $colorHover;
+  }
+}
+
+
+#triggered{
+  position: fixed;
+  top: 0;
+  right: -50%;
+  height: 100vh;
+  width: 50%;
+  background: $colorLight;
+  z-index: 1;
+  text-align: left;
+  transition: all 500ms ease-in-out;
+  &.visible{
+    right: 0;
+  }
+  .triggered-link{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    a{
+      display: block;
+      text-decoration: none;
+      padding: 2rem;
+      color: $colorText;
+      &:hover{
+        background: $colorHover;
+        color: $colorLight;
+
+      }
+    }
+  }
+  .triggered-icon{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin-top: 2rem;
+    list-style: none;
+    .icon{
+      color: $colorText;
+      &:hover{
+        color: $colorHover;
+      }
+    }
+  }
+}
+
+
+
+#close{
+  display: block;
+  width: min-content;
+  font-size: 1.5rem;
+  padding-right: 1rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  &:hover{
+    color: $colorHover;
+  }
+}
+
+.scroll-trigger{
+  opacity: 1;
+  transition: all 600ms ease-in-out;
+  .main-logo{
+    margin: 2rem auto 2rem auto;
+  }
+  &.non-visible{
+    opacity: 0;
   }
 }

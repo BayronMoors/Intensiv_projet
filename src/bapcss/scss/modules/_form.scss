@@ -4,6 +4,28 @@
 // FORM VARIBALES
 // -------------------------------------------------------------------
 
+// VALIDATE
+$width-validate: 100%;
+$padding-validate: 0.7rem;
+$color-validate: $colorText;
+$border-validate: 2px solid $colorNeutral3;
+
+
+$border-validate-focus: 2px solid $colorHover;
+$outline-validate-focus: none;
+
+$color-validate-placeholder: $colorHover;
+
+// SELECTED
+$width-selected: 100%;
+$padding-selected: 0.7rem;
+$color-selected: $colorText;
+$border-selected: 2px solid $colorNeutral3;
+
+$border-selected-focus: 2px solid $colorHover;
+$outline-selected-focus: none;
+
+$color-selected-placeholder: $colorHover;
 // -------------------------------------------------------------------
 // FORM CODE
 // -------------------------------------------------------------------
@@ -11,57 +33,143 @@
 
 
 .validate {
-  width: 100%;
-  padding: 0.7rem;
-  color: $colorText;
-  border: 2px solid $colorNeutral3;
+  width: $width-validate;
+  padding: $padding-validate;
+  color: $color-validate;
+  border: $border-validate;
   &:focus-visible {
-    border: 2px solid $colorHover;
-    outline: none;
+    border: $border-validate-focus;
+    outline: $outline-validate-focus;
     &::placeholder {
-      color: $colorHover;
+      color: $color-validate-placeholder;
     }
   }
 }
 
 .selected {
-  position: relative;
-  width: 100%;
-  padding: 0.7rem;
-  color: $colorText;
-  border: 2px solid $colorNeutral3;
+  width: $width-selected;
+  padding: $padding-selected;
+  color: $color-selected;
+  border: $border-selected;
   &:focus-visible {
-    border: 2px solid $colorHover;
-    outline: none;
+    border: $border-selected-focus;
+    outline: $outline-selected-focus;
     &::placeholder {
-      color: $colorHover;
+      color: $color-selected-placeholder;
     }
   }
-  option {
-    &::before {
-      content: " ";
-      border: 2px solid $colorText;
-      width: 10px;
-    }
-
-    &::after {
-      content: " ";
-      border: 2px solid $colorText;
-      width: 10px;
-    }
-  }
+  
 }
 
 .radio {
-  margin-top: 2rem;
-  margin-right: 1rem;
-  width: 30px;
-  height: 30px;
+  input{
+    display: none;
+  }
+  label{
+    margin-bottom: 1rem;
+  }
+
+  label + input{
+    display: flex;
+    align-items: flex-start;
+    &::after{
+      display: inline-block;
+      content: "";
+      height: 30px;
+      width: 30px;
+      border: 2px solid $colorNeutral3;
+      border-radius: 50%;
+      margin-left: 20px;
+    }
+  }
+
+  input + label{
+    display: flex;
+    align-items: flex-end;
+    &::before{
+      display: inline-block;
+      content: "";
+      height: 30px;
+      width: 30px;
+      border: 2px solid $colorNeutral3;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+  }
+  :checked + label{
+    &::before{
+      content: "V";
+      text-align: center;
+      font-size: 1.2rem;
+      font-family: $font-2;
+      background: $colorText;
+      color: $colorLight;
+    }
+  }
+
+  label + :checked{
+    &::after{
+      content: "V";
+      text-align: center;
+      font-size: 1.2rem;
+      font-family: $font-2;
+      background: $colorText;
+      color: $colorLight;
+    }
+  }
 }
+
 
 .checkbox {
   margin-top: 2rem;
-  margin-right: 1rem;
-  width: 30px;
-  height: 30px;
+  input{
+    display: none;
+  }
+
+  label + input{
+    display: flex;
+    align-items: flex-start;
+    &::after{
+      display: inline-block;
+      content: "";
+      height: 30px;
+      width: 30px;
+      border: 2px solid $colorNeutral3;
+      margin-left: 20px;
+    }
+  }
+
+  input + label{
+    display: flex;
+    align-items: flex-end;
+    &::before{
+      display: inline-block;
+      content: "";
+      height: 30px;
+      width: 30px;
+      border: 2px solid $colorNeutral3;
+      margin-right: 20px;
+    }
+  }
+  :checked + label{
+    &::before{
+      content: "V";
+      text-align: center;
+      font-size: 1.2rem;
+      font-family: $font-2;
+      background: $colorText;
+      color: $colorLight;
+    }
+  }
+
+  labbel + :checked{
+    &::after{
+      content: "V";
+      text-align: center;
+      font-size: 1.2rem;
+      font-family: $font-2;
+      background: $colorText;
+      color: $colorLight;
+    }
+  }
 }
