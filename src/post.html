@@ -17,8 +17,8 @@
             <div class="hide-until-l">
                 <div class="dFlex j-space-between a-center">
                     <ul class="list-nav">
-                        <li><a href="./index.html" class="nav-link">This is Intensiv'</a></li>
-                        <li><a href="./post.html" class="nav-link">Generic Page</a></li>
+                        <li><a href="./index.html" class="nav-link ">This is Intensiv'</a></li>
+                        <li><a href="./post.html" class="nav-link active">Generic Page</a></li>
                         <li><a href="./elements.html" class="nav-link">Elements reference</a></li>
                     </ul>
                     <ul class="list-icon">
@@ -29,9 +29,23 @@
                     </ul>
                 </div>
             </div>
-            <div class="hide-from-l test">
-                <div class="menu-horizontal">
+            <div class="hide-from-l">
+                <div class="menu-horizontal" id="trigger">
                     <i class="fas fa-bars"> MENU</i>
+                </div>
+                <div id="triggered">
+                    <ul class="triggered-link">
+                        <li class="text-right dFlex j-end"><i class="fas fa-times" id="close"></i></li>
+                        <li><a href="./index.html" >This is Intensiv'</a></li>
+                        <li><a href="./post.html" >Generic Page</a></li>
+                        <li><a href="./elements.html" >Elements reference</a></li>
+                    </ul>
+                    <ul class="triggered-icon">
+                        <li><a href="#" class="icon"><i class="fab fa-twitter "></i></a></li>
+                        <li><a href="#" class="icon"><i class="fab fa-facebook-f "></i></a></li>
+                        <li><a href="#" class="icon"><i class="fab fa-instagram "></i></a></li>
+                        <li><a href="#" class="icon"><i class="fab fa-github "></i></a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -39,7 +53,8 @@
     <main>
         <div class="main-content">
             <article class="card">
-                <h2 class="card-title">And this is a <span class="dBlock"></span>intensiv's headline</span></h2>
+                <span class="lineStyle cardAuthor">April 25, 2017 | Author: Bill Crimpson</span>
+                <h2 class="card-title">And this is a <span class="dBlock">intensiv's headline</span></h2>
                 <h3 class="card-subtitle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo quam
                     nihil tenetur quibusdam pariatur sint perferendis iure error veritatis quas sunt quaerat aperiam
                     quisquam, excepturi autem assumenda minima delectus sapiente?</h3>
@@ -57,7 +72,7 @@
                 <input type="text" name="email" id="email" class="validate">
                 <label for="message" class="h4">Message</label>
                 <textarea name="message" id="message" cols="30" rows="10" class="validate"></textarea>
-                <button type="submit" class="btn-light">Send message</button>
+                <button type="submit" class="btn secondary">Send message</button>
             </form>
             <address class="col-l-6">
                 <ul class="dFlex">
@@ -95,5 +110,6 @@
     <footer class="main-footer">
         &copy; Untitled | Design <a href="#">IEPS</a>
     </footer>
+    <script src="js/app.js"></script>
 </body>
 </html>

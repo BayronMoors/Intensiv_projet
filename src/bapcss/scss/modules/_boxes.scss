@@ -36,6 +36,14 @@
   }
 }
 
+// -------------------------------------------------------------------
+// VARIABLES
+// -------------------------------------------------------------------
+
+$font-weight-box: 200;
+$border-box: 3px solid $colorNeutral3;
+$padding-box: 1rem;
+
 
 // -------------------------------------------------------------------
 // DISPLAY
@@ -144,18 +152,6 @@
     align-items: flex-end;
   }
 
-  &.a-space-between{
-    align-items: space-between;
-  }
-
-  &.a-space-around{
-    align-items: space-around;
-  }
-
-  &.a-space-evenly{
-    align-items: space-evenly;
-  }
-
 
   // FLEX DIRECTION
 
@@ -188,7 +184,7 @@
 }
 
 .box{
-  font-weight: 200;
-  border: 3px solid $colorNeutral3;
-  padding: 1rem;
+  font-weight: $font-weight-box;
+  border: $border-box;
+  padding: $padding-box;
 }

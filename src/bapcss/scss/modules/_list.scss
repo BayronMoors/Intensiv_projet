@@ -39,23 +39,44 @@ $padding-list-actions: 0;
 $list-style-list-actions: none;
 
 $display-list-actions-item-inlineBlock: inline-block;
-$margin-bottom-list-actions-item-inlineBlock: .5rem;
-$margin-right-list-actions-item-inlineBlock: .5rem;
+$margin-bottom-list-actions-item-inlineBlock: 0.5rem;
+$margin-right-list-actions-item-inlineBlock: 0.5rem;
 
-
-$display-list-actions-item-inline:inline;
-$margin-bottom-list-actions-item-inline:.0;
-$margin-right-list-actions-item-inline:0;
+$display-list-actions-item-inline: inline;
+$margin-bottom-list-actions-item-inline: 0;
+$margin-right-list-actions-item-inline: 0;
 $text-align-list-actions-item-inline: center;
-$margin-top-list-actions-item-inline:0;
+$margin-top-list-actions-item-inline: 0;
 
-$display-list-actions-item-block:block;
+$display-list-actions-item-block: block;
 $width-list-actions-item-block: min-content;
-$margin-bottom-list-actions-item-block:.5rem;
-$margin-right-list-actions-item-block:.5rem;
+$margin-bottom-list-actions-item-block: 0.5rem;
+$margin-right-list-actions-item-block: 0.5rem;
+
+// .list-page
+$display-list-page: flex;
+$list-style-list-page: none;
+$padding-list-page: 0;
+$margin-top-list-page: 6rem;
+
+$padding-list-page-item: 0;
+$margin-list-page-item: 0;
+$border-left-list-page-item-link: 3px solid $colorNeutral3;
+
+$display-list-page-link: block;
+$padding-list-page-link-s: 0.4rem 0.8rem;
+$padding-list-page-link-l: 0.6rem 1rem;
+$margin-list-page-link: 0;
+$text-decoration-list-page-link: none;
+$border-right-list-page-link: 3px solid $colorNeutral3;
+$border-top-list-page-link: 3px solid $colorNeutral3;
+$border-bottom-list-page-link: 3px solid $colorNeutral3;
+
+$background-list-page-link-hover: $colorHover;
+$color-list-page-link-hover: $colorLight;
 
 // -------------------------------------------------------------------
-// LIST VARIBALES
+// LIST CODE
 // -------------------------------------------------------------------
 
 .list {
@@ -98,6 +119,11 @@ $margin-right-list-actions-item-block:.5rem;
   flex-direction: $flex-direction-list-nav;
   padding-left: $padding-list-nav;
   list-style: $list-style-list-nav;
+  .active{
+    background: white;
+    color: $colorText;
+  }
+  
 }
 
 .list-definition {
@@ -108,8 +134,6 @@ $margin-right-list-actions-item-block:.5rem;
     margin-left: $margin-left-list-nav-text-definition;
   }
 }
-
-
 
 .list-actions {
   padding: $padding-list-actions;
@@ -122,11 +146,10 @@ $margin-right-list-actions-item-block:.5rem;
 
   .item-block {
     display: $display-list-actions-item-block;
-    width:$width-list-actions-item-block;
+    width: $width-list-actions-item-block;
     margin-bottom: $margin-bottom-list-actions-item-block;
     margin-right: $margin-right-list-actions-item-block;
   }
-
 
   .item-inline {
     display: $display-list-actions-item-inline;
@@ -137,34 +160,40 @@ $margin-right-list-actions-item-block:.5rem;
   }
 }
 
-.list-page{
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin-top: 6rem;
-  li{
-    padding: 0;
-    margin: 0;
-    &:first-of-type a{
-      border-left: 3px solid $colorNeutral3;
+.list-page {
+  display: $display-list-page;
+  list-style: $list-style-list-page;
+  padding: $padding-list-page;
+  margin-top: $margin-top-list-page;
+  li {
+    padding: $padding-list-page-item;
+    margin: $margin-list-page-item;
+    &:first-of-type a {
+      border-left: $border-left-list-page-item-link;
     }
-    a{
-      display: block;
-      padding: .4rem .8rem;
-      @media screen and (min-width: map-get($screen-sizes, 'm' , 'breakpoint')){
-        padding: .6rem 1rem;
+    a {
+      display: $display-list-page-link;
+      padding: $padding-list-page-link-s;
+      @media screen and (min-width: map-get($screen-sizes, "m" , "breakpoint")) {
+        padding: $padding-list-page-link-l;
       }
-      margin: 0;
-      text-decoration: none;
-      &:hover{
+      margin: $margin-list-page-link;
+      text-decoration: $text-decoration-list-page-link;
+      &:hover {
+        background: $background-list-page-link-hover;
+        color: $color-list-page-link-hover;
+      }
+      &.active {
         background: $colorNeutral3;
+        &:hover {
+          background: $colorHover;
+          color: $colorLight;
+        }
       }
 
-
-      border-right: 3px solid $colorNeutral3;
-      border-top: 3px solid $colorNeutral3;
-      border-bottom: 3px solid $colorNeutral3;
+      border-right: $border-right-list-page-link;
+      border-top: $border-top-list-page-link;
+      border-bottom: $border-bottom-list-page-link;
     }
   }
-
 }

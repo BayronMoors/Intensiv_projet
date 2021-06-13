@@ -21,7 +21,7 @@
                     <ul class="list-nav">
                         <li><a href="./index.html" class="nav-link">This is Intensiv'</a></li>
                         <li><a href="./post.html" class="nav-link">Generic Page</a></li>
-                        <li><a href="./elements.html" class="nav-link">Elements reference</a></li>
+                        <li><a href="./elements.html" class="nav-link active">Elements reference</a></li>
                     </ul>
                     <ul class="list-icon">
                         <li><a href="#" class="icon"><i class="fab fa-twitter "></i></a></li>
@@ -31,9 +31,23 @@
                     </ul>
                 </div>
             </div>
-            <div class="hide-from-l test">
-                <div class="menu-horizontal">
+            <div class="hide-from-l">
+                <div class="menu-horizontal" id="trigger">
                     <i class="fas fa-bars"> MENU</i>
+                </div>
+                <div id="triggered">
+                    <ul class="triggered-link">
+                        <li class="text-right dFlex j-end"><i class="fas fa-times" id="close"></i></li>
+                        <li><a href="./index.html" >This is Intensiv'</a></li>
+                        <li><a href="./post.html" >Generic Page</a></li>
+                        <li><a href="./elements.html" >Elements reference</a></li>
+                    </ul>
+                    <ul class="triggered-icon">
+                        <li><a href="#" class="icon"><i class="fab fa-twitter "></i></a></li>
+                        <li><a href="#" class="icon"><i class="fab fa-facebook-f "></i></a></li>
+                        <li><a href="#" class="icon"><i class="fab fa-instagram "></i></a></li>
+                        <li><a href="#" class="icon"><i class="fab fa-github "></i></a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -163,38 +177,38 @@
                 <h3>Actions</h3>
                 <div>
                     <ul class="list-actions">
-                        <li class="item-inlineBlock"><a href="#" class="btn">Primary</a></li>
-                        <li class="item-inlineBlock"><a href="#" class="btn-light">Default</a></li>
+                        <li class="item-inlineBlock"><a href="#" class="btn primary">Primary</a></li>
+                        <li class="item-inlineBlock"><a href="#" class="btn secondary">Default</a></li>
                     </ul>
                 </div>
                 <div>
                     <ul class="list-actions">
-                        <li class="item-inlineBlock"><a href="#" class="btn small">Small</a></li>
-                        <li class="item-inlineBlock"><a href="#" class="btn-light small">Small</a></li>
+                        <li class="item-inlineBlock"><a href="#" class="btn primary small">Small</a></li>
+                        <li class="item-inlineBlock"><a href="#" class="btn secondary small">Small</a></li>
                     </ul>
                 </div>
                 <div class="col-m-6">
                     <ul class="list-actions">
-                        <li class="item-block"><a href="#" class="btn">Default</a></li>
-                        <li class="item-block"><a href="#" class="btn-light">Default</a></li>
+                        <li class="item-block"><a href="#" class="btn primary">Default</a></li>
+                        <li class="item-block"><a href="#" class="btn secondary">Default</a></li>
                     </ul>
                 </div>
                 <div class="col-m-6">
                     <ul class="list-actions">
-                        <li class="item-block"><a href="#" class="btn small">Small</a></li>
-                        <li class="item-block"><a href="#" class="btn-light small">Small</a></li>
+                        <li class="item-block"><a href="#" class="btn primary small">Small</a></li>
+                        <li class="item-block"><a href="#" class="btn secondary small">Small</a></li>
                     </ul>
                 </div>
                 <div class="col-m-6">
                     <ul class="list-actions">
-                        <li class="item-inline"><a href="#" class="btn fit">Default</a></li>
-                        <li class="item-inline"><a href="#" class="btn-light fit">Default</a></li>
+                        <li class="item-inline"><a href="#" class="btn primary fit">Default</a></li>
+                        <li class="item-inline"><a href="#" class="btn secondary fit">Default</a></li>
                     </ul>
                 </div>
                 <div class="col-m-6">
                     <ul class="list-actions">
-                        <li class="item-inline"><a href="#" class="btn small fit">Small</a></li>
-                        <li class="item-inline"><a href="#" class="btn-light small fit">Small</a></li>
+                        <li class="item-inline"><a href="#" class="btn primary small fit">Small</a></li>
+                        <li class="item-inline"><a href="#" class="btn secondary small fit">Small</a></li>
                     </ul>
                 </div>
                 <div class="hr"></div>
@@ -307,33 +321,33 @@
             <section class="grid">
                 <h2>Buttons</h2>
                 <div>
-                    <a href="#" class="btn">Primary</a>
-                    <a href="#" class="btn-light">Default</a>
+                    <a href="#" class="btn primary">Primary</a>
+                    <a href="#" class="btn secondary">Default</a>
                 </div>
                 <div>
-                    <a href="#" class="btn large">Large</a>
-                    <a href="#" class="btn-light">Default</a>
-                    <a href="#" class="btn-light small">Small</a>
+                    <a href="#" class="btn primary large">Large</a>
+                    <a href="#" class="btn secondary">Default</a>
+                    <a href="#" class="btn secondary small">Small</a>
                 </div>
                 <div class="col-xs-6">
-                    <a href="#" class="btn fit">Fit</a>
+                    <a href="#" class="btn primary fit">Fit</a>
                 </div>
                 <div class="col-xs-6">
-                    <a href="#" class="btn-light fit">Fit</a>
+                    <a href="#" class="btn secondary fit">Fit</a>
                 </div>
                 <div class="col-xs-6">
-                    <a href="#" class="btn small fit">Fit + small</a>
+                    <a href="#" class="btn primary small fit">Fit + small</a>
                 </div>
                 <div class="col-xs-6">
-                    <a href="#" class="btn-light small fit">Fit + small</a>
+                    <a href="#" class="btn secondary small fit">Fit + small</a>
                 </div>
                 <div>
-                    <a href="#" class="btn"><i class="fas fa-search"></i> Icon</a>
-                    <a href="#" class="btn-light"><i class="fas fa-download"></i> Icon</a>
+                    <a href="#" class="btn primary"><i class="fas fa-search"></i> Icon</a>
+                    <a href="#" class="btn secondary"><i class="fas fa-download"></i> Icon</a>
                 </div>
                 <div>
-                    <a href="#" class="btn disabled">Primary</a>
-                    <a href="#" class="btn-light disabled">Default</a>
+                    <a href="#" class="btn primary disabled">Primary</a>
+                    <a href="#" class="btn secondary disabled">Default</a>
                 </div>
                 <div class="hr"></div>
             </section>
@@ -350,33 +364,33 @@
                     </div>
                     <label for="category"></label>
                     <select name="category" id="category" class="selected">
-                        <option value="">Category</option>
+                        <option value="">- Category -</option>
                         <option value="cat1">Category1</option>
                         <option value="cat2">Category2</option>
                         <option value="cat3">Category3</option>
                         <option value="cat4">Category4</option>
                     </select>
                     <div class="grid">
-                        <div class="dFlex a-end col-s-4">
-                            <input type="radio" name="quality" id="low" class="radio">
+                        <div class="dFlex a-end col-s-4 radio">
+                            <input type="radio" name="quality" id="low" >
                             <label for="low">Low</label>
                         </div>
-                        <div class="dFlex a-end col-s-4">
-                            <input type="radio" name="quality" id="normal" class="radio">
+                        <div class="dFlex a-end col-s-4 radio">
+                            <input type="radio" name="quality" id="normal">
                             <label for="normal">Normal</label>
                         </div>
-                        <div class="dFlex a-end col-s-4">
-                            <input type="radio" name="quality" id="high" class="radio">
+                        <div class="dFlex a-end col-s-4 radio">
+                            <input type="radio" name="quality" id="high">
                             <label for="high">High</label>
                         </div>
                     </div>
                     <div class="grid">
-                        <div class="dFlex a-end col-s-6">
-                            <input type="checkbox" name="copy" id="copy" class="checkbox">
+                        <div class="dFlex a-end col-s-6 checkbox">
+                            <input type="checkbox" name="copy" id="copy" >
                             <label for="copy">Email me a copy</label>
                         </div>
-                        <div class="dFlex a-end col-s-6">
-                            <input type="checkbox" name="human" id="human" class="checkbox">
+                        <div class="dFlex a-end col-s-6 checkbox">
+                            <input type="checkbox" name="human" id="human" >
                             <label for="human">I am a human</label>
                         </div>
                     </div>
@@ -385,8 +399,8 @@
                         <textarea name="message" id="emessage" cols="80" rows="10" class="validate"></textarea>
                     </div>
                     <div>
-                        <button type="submit" class="btn">Send Message</button>
-                        <button class="btn-light">Reset</button>
+                        <button type="submit" class="btn primary">Send Message</button>
+                        <button type="reset" class="btn secondary">Reset</button>
                     </div>
                 </form>
                 <div class="hr"></div>
@@ -401,28 +415,28 @@
                             <img src="./images/photo-1517331237869-8c4ed7fadcb4.jpg" alt="image1" class="fullSize">
                         </div>
                         <div class="col-xs-4">
-                            <img src="./images/photo-1621414130936-6f0c63360ec2.jpg" alt="image1" class="col-xs-4 fullSize">
+                            <img src="./images/photo-1517331237869-8c4ed7fadcb4.jpg" alt="image1" class="col-xs-4 fullSize">
                         </div>
                         <div class="col-xs-4">
-                            <img src="./images/photo-1621427393280-702e840ed102.jpg" alt="image1" class="col-xs-4 fullSize">
+                            <img src="./images/photo-1517331237869-8c4ed7fadcb4.jpg" alt="image1" class="col-xs-4 fullSize">
                         </div>
                         <div class="col-xs-4 ">
                             <img src="./images/photo-1517331237869-8c4ed7fadcb4.jpg" alt="image1" class="fullSize">
                         </div>
                         <div class="col-xs-4">
-                            <img src="./images/photo-1621414130936-6f0c63360ec2.jpg" alt="image1" class="col-xs-4 fullSize">
+                            <img src="./images/photo-1517331237869-8c4ed7fadcb4.jpg" alt="image1" class="col-xs-4 fullSize">
                         </div>
                         <div class="col-xs-4">
-                            <img src="./images/photo-1621427393280-702e840ed102.jpg" alt="image1" class="col-xs-4 fullSize">
+                            <img src="./images/photo-1517331237869-8c4ed7fadcb4.jpg" alt="image1" class="col-xs-4 fullSize">
                         </div>
                         <div class="col-xs-4 ">
                             <img src="./images/photo-1517331237869-8c4ed7fadcb4.jpg" alt="image1" class="fullSize">
                         </div>
                         <div class="col-xs-4">
-                            <img src="./images/photo-1621414130936-6f0c63360ec2.jpg" alt="image1" class="col-xs-4 fullSize">
+                            <img src="./images/photo-1517331237869-8c4ed7fadcb4.jpg" alt="image1" class="col-xs-4 fullSize">
                         </div>
                         <div class="col-xs-4">
-                            <img src="./images/photo-1621427393280-702e840ed102.jpg" alt="image1" class="col-xs-4 fullSize">
+                            <img src="./images/photo-1517331237869-8c4ed7fadcb4.jpg" alt="image1" class="col-xs-4 fullSize">
                         </div>
                     </div>
                 </div>
@@ -493,7 +507,7 @@
                 <input type="text" name="email" id="email" class="validate">
                 <label for="message" class="h4">Message</label>
                 <textarea name="message" id="message" cols="30" rows="10" class="validate"></textarea>
-                <button type="submit" class="btn-light">Send message</button>
+                <button type="submit" class="btn secondary">Send message</button>
             </form>
             <address class="col-l-6">
                 <ul class="dFlex">
@@ -531,6 +545,7 @@
     <footer class="main-footer">
         &copy; Untitled | Design <a href="#">IEPS</a>
     </footer>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
