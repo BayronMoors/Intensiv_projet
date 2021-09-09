@@ -143,11 +143,10 @@ body {
     margin: 1rem 0;
     width: 200px;
     height: inherit;
-<<<<<<< HEAD
+
     object-fit: cover;
     transition: all 600ms ease-in-out;
-=======
->>>>>>> main
+
     &.fullSize {
       display: flex;
       width: 100%;
@@ -280,7 +279,7 @@ body {
     color: $colorHover;
   }
 }
-<<<<<<< HEAD
+
 
 .scroll-trigger{
   opacity: 1;
@@ -292,5 +291,4 @@ body {
     opacity: 0;
   }
 }
-=======
->>>>>>> main
+
